@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>JSON grammar based on Lexepars parser lib.</Description>
+    <Copyright>Copyright © 2018-2019</Copyright>
+    <AssemblyTitle>Lexepars.Grammars.Json</AssemblyTitle>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <Authors>Dmitrii Nemtsov</Authors>
+    <AssemblyName>Lexepars.Grammars.Json</AssemblyName>
+    <PackageId>Lexepars.Grammars.Json</PackageId>
+    <PackageProjectUrl>https://github.com/dnemtsov/Lexepars</PackageProjectUrl>
+    <PackageLicense>https://github.com/dnemtsov/Lexepars/blob/master/LICENSE.txt</PackageLicense>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/dnemtsov/Lexepars</RepositoryUrl>
+    <PackageTags>json, parsing, lexer, tokenization</PackageTags>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lexepars" Version="1.1.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
+  </ItemGroup>
+</Project>
