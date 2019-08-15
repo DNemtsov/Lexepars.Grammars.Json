@@ -9,10 +9,10 @@
     <Authors>Dmitrii Nemtsov</Authors>
     <AssemblyName>Lexepars.Grammars.Json</AssemblyName>
     <PackageId>Lexepars.Grammars.Json</PackageId>
-    <PackageProjectUrl>https://github.com/dnemtsov/Lexepars</PackageProjectUrl>
-    <PackageLicense>https://github.com/dnemtsov/Lexepars/blob/master/LICENSE.txt</PackageLicense>
+    <PackageProjectUrl>https://github.com/dnemtsov/Lexepars.Grammars.Json</PackageProjectUrl>
+    <PackageLicense>https://github.com/dnemtsov/Lexepars.Grammars.Json/blob/master/LICENSE.txt</PackageLicense>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/dnemtsov/Lexepars</RepositoryUrl>
+    <RepositoryUrl>https://github.com/dnemtsov/Lexepars.Grammars.Json</RepositoryUrl>
     <PackageTags>json, parsing, lexer, tokenization</PackageTags>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
