@@ -1,10 +1,9 @@
-using System.IO;
-
 namespace Lexepars.Grammars.Json.Tests
 {
     using Lexepars.TestFixtures;
     using Shouldly;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
     using Xunit;
 

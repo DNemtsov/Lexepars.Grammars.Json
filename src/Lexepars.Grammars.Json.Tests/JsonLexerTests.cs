@@ -2,9 +2,25 @@ namespace Lexepars.Grammars.Json.Tests
 {
     using Lexepars.TestFixtures;
     using Shouldly;
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using Xunit;
+
+    public static class JsonLexerTestExtensions
+    {
+        public static void ShouldList<T>(this IEnumerable<T> e, params Action<T>[] items)
+        {
+            var enumerator = e.GetEnumerator();
+
+            foreach (var item in items)
+            {
+                enumerator.MoveNext().ShouldBeTrue();
+
+                item(enumerator.Current);
+            }
+        }
+    }
 
     public class JsonLexerTests
     {

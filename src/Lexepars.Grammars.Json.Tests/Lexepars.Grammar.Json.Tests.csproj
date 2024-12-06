@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>Lexepars.Json.Tests</AssemblyName>
     <PackageId>Lexepars.Json.Tests</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
@@ -10,20 +10,34 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lexepars.TestFixtures" Version="1.1.1" />
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.3">
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="Shouldly" Version="4.2.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Lexepars.Grammars.Json\Lexepars.Grammars.Json.csproj" />
   </ItemGroup>
+
+  <PropertyGroup>
+    <LexeparsTestFixturesProjectPath>..\..\..\Lexepars\src\Lexepars.TestFixtures\Lexepars.TestFixtures.csproj</LexeparsTestFixturesProjectPath>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition="Exists($(LexeparsTestFixturesProjectPath))">
+      <ItemGroup>
+        <ProjectReference Include="$(LexeparsTestFixturesProjectPath)" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Include="Lexepars.TestFixtures" Version="1.1.1" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
 
 </Project>
